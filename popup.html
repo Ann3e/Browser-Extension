@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CSES Sync</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h2>CSES → GitHub</h2>
+    <label>GitHub repo (owner/repo)</label>
+    <input id="repo" placeholder="owner/repo" />
+    <label>Base path for solutions</label>
+    <input id="basePath" placeholder="solutions" />
+    <label>Personal Access Token</label>
+    <input id="token" type="password" placeholder="ghp_xxx" />
+    <label class="small"><input id="storeToken" type="checkbox" /> Store token</label>
+    <label>OAuth Client ID (optional)</label>
+    <input id="clientId" placeholder="GitHub OAuth client_id" />
+    <label>Exchange URL (optional)</label>
+    <input id="exchangeUrl" placeholder="https://your-server.example/exchange" />
+    <div class="row">
+      <button id="saveConfig">Save config</button>
+      <button id="authorize">Authorize (OAuth)</button>
+    </div>
+
+    <h3>Stored problems</h3>
+    <div id="list">Loading…</div>
+    <div id="status" class="status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

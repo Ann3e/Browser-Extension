@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+secrets/
+*.pem
+*.key
+/.vscode/
+# Do not commit tokens or secrets
+*.env
+*.secret

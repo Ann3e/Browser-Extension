@@ -1,0 +1,23 @@
+{
+	"manifest_version": 3,
+	"name": "CSES → GitHub Sync",
+	"version": "0.1.0",
+	"description": "Sync CSES problem solves with a GitHub file in a repo.",
+	"permissions": ["storage", "scripting", "activeTab", "identity"],
+	"host_permissions": ["https://cses.fi/*", "https://api.github.com/*"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"action": {
+		"default_popup": "popup.html",
+		"default_title": "CSES Sync"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://cses.fi/problemset/task/*"],
+			"js": ["content_script.js"],
+			"run_at": "document_idle"
+		}
+	]
+}
+
